@@ -1,0 +1,42 @@
+"""
+Creación de entornos virtuales con VIRTUALENV:
+0) Ejecutar si te falta el modulo: pip install virtualenv
+1) Crear la carpeta del trabajo
+2) Entrar a la carpeta del trabajo
+3) Craer el entorno virtual con: virtualenv [nombre del entorno]
+4) Creo el archivo "requirements.txt"
+5) Agrego todo los modulos que quiera en el archivo del item (4) con el formato [nombre del modulo]==[version del modulo]
+6.a) Activar el entorno en unix con: source [nombre del entorno]/bin/activate
+6.b) Activar el entorno en windows con: [nombre del entorno]/Script/activate.bat
+7) Salir del entorno con el comando: deactivate
+
+EXTRA) 
+- Para ver las dependencias instalados en el entorno uso: pip list
+- Para ver los modulos que están en mi lista (4) uso: pip freeze
+- Para pasar los modulos instalados a la lista (4) uso: pip freeze > "requirements.txt"
+- Si quiero instalar los modulos en el archivo del item (4) uso: pip install -r requirements.txt
+- Una vez dentro del entorno virtual, añado si quiero los modulos con: pip install [nombre del modulo]
+- Desinstalo modulos con: pip uninstall [nombre del modulo]
+
+
+Creación de entornos virtuales con PIPENV:
+0) Ejecutar si te falta el modulo: pip install pipenv
+1) Crear la carpeta del trabajo
+2) Entrar a la carpeta del trabajo
+3) Craer y acceder al entorno virtual con: pipenv shell
+4) Creo el archivo "requirements.txt"
+5) Agrego todo los modulos que quiera en el archivo del item (4) con el formato [nombre del modulo]==[version del modulo]
+6) Salir del entorno con el comando: exit
+
+EXTRAS)
+- Para ver los modulos instalados en el entorno uso: pipenv lock -r
+- Para ver las subdependencias de un modulo uso: pipenv graph
+- Para chequera las vulnerabilidades uso: pipenv check
+- Si quiero instalar mi modulo como dependencia de desarrollo uso: pipenv install [nombre del modulo] --dev
+- Si quiero instalar los modulos en el archivo del item (4) uso: pipenv install -r requirements.txt
+- Para instalar todos los modulos que figuren en pipfile uso: pipenv install
+- Actualizo el archivo de despligue pipfile.lock con el comando: pipenv lock
+- Para instalar los modulos que solo esten en el pipfile.lock en produccion uso: pipenv install --ignore-pipfile
+- Para borrar un entorno uso: pipenv --rm
+- Desinstalo modulos con: pipenv uninstall [nombre del modulo]
+"""
