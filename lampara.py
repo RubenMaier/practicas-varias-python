@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
+
 class LamparaDeEscritorio:
     # variable de clase
-    # en python todo en mayusculas significa que la variable es una constante
+    # en python todo en mayúsculas significa que la variable es una constante
     _LAMPARAS = ['''
           .
      .    |    ,
@@ -13,7 +14,7 @@ class LamparaDeEscritorio:
         _|=|_
        |_____|
     ''',
-    '''
+                 '''
          ,-.
         (   )
          \ /
@@ -21,25 +22,26 @@ class LamparaDeEscritorio:
        |_____|
     ''']
 
-    # el siguiente metodo es el contructur, que ejecutamos cuando instanaciamos un nuevo elemento de la clase
+    # el siguiente método es el constructor, que ejecutamos cuando instanaciamos un nuevo elemento de la clase
     # en python, algo que empiece con "__" significa que si lo toco se rompe, asi que mejor no tocar
-    def __init__(self): # self es la propia clase (los metodos de clase reciben el parametro class)
-        self._esta_encendida = False # variable privada
+    def __init__(self):  # self es la propia clase (los metodos de clase reciben el parametro class)
+        self._esta_encendida = False  # variable privada
 
-    def encender(self): # metodo publico
+    def encender(self):  # método publico
         self._esta_encendida = True
         self._actualizar_imagen()
 
-    def apagar(self): # metodo publico
+    def apagar(self):  # método publico
         self._esta_encendida = False
         self._actualizar_imagen()
 
     # si algo empieza con "_" significa que es privado, sea una funcion o una variable
-    def _actualizar_imagen(self): # metodo privado
+    def _actualizar_imagen(self):  # método privado
         if self._esta_encendida:
             print(self._LAMPARAS[0])
         else:
             print(self._LAMPARAS[1])
+
 
 def ejecutar():
     lampara = LamparaDeEscritorio()
